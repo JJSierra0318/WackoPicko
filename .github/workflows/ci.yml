@@ -4,7 +4,7 @@ jobs:
    machineStandalone:
       runs-on: ubuntu-latest
       steps:
-         - uses: actions/checkout@3
+         - uses: actions/checkout@v3
          - uses: docker://docker.io/fluidattacks/skims:latest
            name: skimsStandalone
            with:
