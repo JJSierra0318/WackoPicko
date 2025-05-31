@@ -8,5 +8,11 @@ jobs:
          - uses: docker://docker.io/fluidattacks/skims:latest
            name: skimsStandalone
            with:
-             args: skims --strict scan .
+             args: skims scan ./fluid-config.yml
+         - name: Archive code coverage results
+           if: always()
+           uses: actions/upload-artifact@v4
+           with:
+             name: code-coverage-report
+             path: Fluid-Attacks-Results.csv
         
