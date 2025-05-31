@@ -1,4 +1,7 @@
 namespace: WackoPicko
+output:
+  file_path: ./Fluid-Attacks-Results.csv
+  format: CSV
 strict: true
 working_dir: .
 language: EN
