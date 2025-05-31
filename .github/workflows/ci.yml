@@ -10,6 +10,7 @@ jobs:
            with:
              args: skims scan ./fluid-config.yml
          - name: Archive code coverage results
+           if: always()
            uses: actions/upload-artifact@v4
            with:
              name: code-coverage-report
